@@ -100,15 +100,26 @@ prodotto_valori(d)
 
 # 8. Scrivi una funzione "inverti_dizionario(d)" che scambi chiavi e valori.
 
-def inverti_dizionario(d):
-    chiavi = dict.keys(d)
-    valori = dict.values(d)
-    dizionario2 = {}
-    # dict.keys(dizionario2) = valori
-    # dict.values(dizionario2) = chiavi
-    print(dizionario2)
+def inverti_dizionario(D):
+    D2 = {}
+    for i, e in D.items():
+        D2[e] = i
+    return D2
 
-inverti_dizionario(d)
+inverti_dizionario(D)
+
+#9.
+
+def conta_lettere(s):
+    D = {}
+    for i in s:
+        if i in D:
+            D[i] += 1
+        else:
+            D[i] = 1
+    return D
+
+conta_lettere(s)
 
 # 9. Scrivi una funzione "conta_lettere(testo)" che restituisce un dizionario con la frequenza delle lettere.
 
